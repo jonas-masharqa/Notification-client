@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        
-      </>
-    )
-  }
+const App = () => {
+  return (
+    <>
+    </>
+  )
 }
 
 export default App
