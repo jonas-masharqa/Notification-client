@@ -18,6 +18,7 @@ const WriteMessage = () => {
         <h2>Write Your Message!</h2>
         <input
           onChange={e => setMessage(e.target.value)}
+          value={newMessage}
           placeholder="Your messages goes here .."
         />
         <button onClick={() => sendMessage()}>↪</button>
@@ -27,3 +28,4 @@ const WriteMessage = () => {
 }
 
 export default WriteMessage
+

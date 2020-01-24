@@ -10,11 +10,20 @@ const ViewMessage = () => {
 
   if (allMessages) {
     message = allMessages.map(message => {
-      return <div>{message}</div>
+      return <div class="bubbleWrapper">
+      <div class="inlineContainer">
+        <img
+          class="inlineIcon"
+          src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+        ></img>
+        <div class="otherBubble other">{message}</div>
+      </div>
+      <span class="other"></span>
+    </div>
     })
   }
 
-  socket.on('chat', (data) => {
+  socket.on('chat', data => {
     setAllMessages([...allMessages, data])
   })
 
