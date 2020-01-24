@@ -20,7 +20,7 @@ const LandingPage = () => {
               <Icon name='compose' size='massive' color='black' />
             </NavLink>
             <NavLink className='landing-link' to='view'>
-              <h3>Click here to view your message</h3>
+              <h3>Click here to view your message in realtime</h3>
               <Icon name='chat' size='massive' color='black' />
             </NavLink>
           </Grid>
