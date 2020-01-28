@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import openSocket from 'socket.io-client'
 import NeonLines from '../Images/neon-lines.jpg'
 import { Button, Form } from 'semantic-ui-react'
+import { NavLink } from 'react-router-dom'
 
 const WriteMessage = () => {
   const lines = <img id="lines-pic" src={NeonLines} alt="Neon Lines" />
@@ -29,6 +30,9 @@ const WriteMessage = () => {
 
   return (
     <>
+      <NavLink to='/'>
+        <Button>Back</Button>
+      </NavLink>
       <center>
         <div id="write-container">
           <div id="lines-pic">{lines}</div>

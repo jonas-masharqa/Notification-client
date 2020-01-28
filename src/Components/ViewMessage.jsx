@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import NeonMessage from '../Images/message.jpg'
 import openSocket from 'socket.io-client'
+import { Button } from 'semantic-ui-react'
+import { NavLink } from 'react-router-dom'
 
 const ViewMessage = () => {
   const [allMessages, setAllMessages] = useState([])
@@ -37,6 +39,9 @@ const ViewMessage = () => {
   return (
     <>
       <div id="bg-image">
+      <NavLink to='/'>
+        <Button>Back</Button>
+      </NavLink>
         {background}
         <h1 id="view-header">Your Messages</h1>
         <div>{messageV}</div>
