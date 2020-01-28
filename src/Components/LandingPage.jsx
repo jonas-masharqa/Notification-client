@@ -1,18 +1,23 @@
 import React from 'react'
+import NeonArrow from '../Images/neon-arrows.jpg'
 import { Header, Icon, Container, Grid } from 'semantic-ui-react'
 import { NavLink } from 'react-router-dom'
 
 const LandingPage = () => {
+  const arrow = <img id="arrow-pic" src={NeonArrow} alt="Neon Arrow Picture" />
   return (
     <>
     <center>
-      <Header id='landing-header'as="h1" icon>
-          <Icon name="mail" />
-          Write an instant message!
-          <Header.Subheader>
-            Open the two links in different windows to see the magic of Websockets.
-          </Header.Subheader>
-        </Header>
+      <div id='header-container'>
+        <div id='header-banner'>{arrow}</div>
+          <Header id='landing-header'as="h1" icon>
+            <Icon name="mail" />
+            Write an instant message!
+            <Header.Subheader id='landing-subheader'>
+              Open the two links in different windows to see the magic of Websockets.
+            </Header.Subheader>
+          </Header>
+        </div>
         <Container id='landing-container'>
           <Grid centered container columns={2}>
             <NavLink className='landing-link' to='write'>

@@ -6,7 +6,7 @@ const ViewMessage = () => {
 
   let message
 
-  const socket = openSocket('http://localhost:5000')
+  const socket = openSocket('https://jonas-message-backend.herokuapp.com/')
 
   if (allMessages) {
     message = allMessages.map(message => {

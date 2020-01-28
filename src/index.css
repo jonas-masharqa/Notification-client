@@ -1,11 +1,47 @@
 body {
-  margin: 2rem !important;
+  margin: 0 2rem !important;
 }
+
+/* body:after {
+  content: "";
+  background-image: url('https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80') !important;
+  background-size: cover !important;
+  background-position-y: 50% !important;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+} */
 
 /* Landing Page */
 
+#header-container {
+  position: relative;
+  height: 600px !important;
+}
+
+#arrow-pic {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  opacity: 0.9;
+  box-shadow: 0 4px 10px 0;
+}
+
 #landing-header{
   font-size: 40px;
+  width: auto !important;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  color: rgb(241, 206, 90);
+}
+
+#landing-subheader{
+  color: rgb(241, 206, 90);
 }
 
 #landing-container{

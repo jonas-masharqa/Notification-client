@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import openSocket from 'socket.io-client'
+import { Header, Icon, Container, Grid } from 'semantic-ui-react'
 
 const WriteMessage = () => {
   const [newMessage, setMessage] = useState('')
 
-  const socket = openSocket('http://localhost:5000')
+  const socket = openSocket('https://jonas-message-backend.herokuapp.com/')
 
   const sendMessage = () => {
     console.log('MESSAGE SENT')
