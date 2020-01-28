@@ -4,7 +4,7 @@ import { Header, Icon, Container, Grid } from 'semantic-ui-react'
 import { NavLink } from 'react-router-dom'
 
 const LandingPage = () => {
-  const arrow = <img id="arrow-pic" src={NeonArrow} alt="Neon Arrow Picture" />
+  const arrow = <img id="arrow-pic" src={NeonArrow} alt="Neon Arrow" />
   return (
     <>
     <center>

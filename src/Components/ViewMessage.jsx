@@ -1,25 +1,32 @@
 import React, { useState } from 'react'
+import NeonMessage from '../Images/message.jpg'
 import openSocket from 'socket.io-client'
 
 const ViewMessage = () => {
   const [allMessages, setAllMessages] = useState([])
 
-  let message
+  const background = (
+    <img id="message-pic" src={NeonMessage} alt="Neon Message Picture" />
+  )
+
+  let messageV
 
   const socket = openSocket('https://jonas-message-backend.herokuapp.com/')
 
   if (allMessages) {
-    message = allMessages.map(message => {
-      return <div class="bubbleWrapper">
-      <div class="inlineContainer">
-        <img
-          class="inlineIcon"
-          src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
-        ></img>
-        <div class="otherBubble other">{message}</div>
-      </div>
-      <span class="other"></span>
-    </div>
+    messageV = allMessages.map(message => {
+      return (
+        <div className="bubbleWrapper">
+          <div className="inlineContainer">
+            <img
+              className="inlineIcon"
+              src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+            ></img>
+            <div className="otherBubble other">{message}</div>
+          </div>
+          <span className="other"></span>
+        </div>
+      )
     })
   }
 
@@ -29,8 +36,10 @@ const ViewMessage = () => {
 
   return (
     <>
-      <div>
-        {message}
+      <div id="bg-image">
+        {background}
+        <h1 id="view-header">Your Messages</h1>
+        <div>{messageV}</div>
       </div>
     </>
   )

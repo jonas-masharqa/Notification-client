@@ -4,7 +4,7 @@ import NeonLines from '../Images/neon-lines.jpg'
 import { Button, Form } from 'semantic-ui-react'
 
 const WriteMessage = () => {
-  const lines = <img id="lines-pic" src={NeonLines} alt="Neon Lines Picture" />
+  const lines = <img id="lines-pic" src={NeonLines} alt="Neon Lines" />
 
   const [newMessage, setMessage] = useState('')
 

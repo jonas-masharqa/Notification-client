@@ -54,9 +54,30 @@ body {
 
 /* ViewMessage */
 
+#message-pic{
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.7;
+object-position: 80% !important;
+}
+
+#view-header{
+  text-align: center;
+  font-size: 80px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 * {
   font-family: 'Avenir';
 }
+
 .bubbleWrapper {
 	padding: 10px 10px;
 	display: flex;
@@ -65,14 +86,17 @@ body {
 	align-self: flex-end;
   color: #fff;
 }
+
 .inlineContainer {
   display: inline-flex;
 }
+
 .inlineContainer.own {
   flex-direction: row-reverse;
 }
+
 .inlineIcon {
-  width:20px;
+  width:30px;
   object-fit: contain;
 }
 
@@ -84,16 +108,17 @@ body {
 	background-color: #6C8EA4;
 	border-radius: 16px 16px 16px 0;
 	border: 1px solid #54788e;
-  
+  font-size:25px;
 }
 
 .other {
 	align-self: flex-start;
 }
+
 span.own,
 span.other{
   font-size: 14px;
-  color: grey;
+  color: rgb(255, 249, 249);
 }
 
 /* WriteMessage */
