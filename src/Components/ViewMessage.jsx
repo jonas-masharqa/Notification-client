@@ -1,25 +1,34 @@
 import React, { useState } from 'react'
+import BackgroundImage from '../Images/neoncolors.jpg'
 import openSocket from 'socket.io-client'
+import { Button } from 'semantic-ui-react'
+import { NavLink } from 'react-router-dom'
 
 const ViewMessage = () => {
   const [allMessages, setAllMessages] = useState([])
 
-  let message
+  const background = (
+    <img id="message-pic" src={BackgroundImage} alt="Neon Message Picture" />
+  )
 
-  const socket = openSocket('http://localhost:5000')
+  let messageV
+
+  const socket = openSocket('https://jonas-message-backend.herokuapp.com/')
 
   if (allMessages) {
-    message = allMessages.map(message => {
-      return <div class="bubbleWrapper">
-      <div class="inlineContainer">
-        <img
-          class="inlineIcon"
-          src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
-        ></img>
-        <div class="otherBubble other">{message}</div>
-      </div>
-      <span class="other"></span>
-    </div>
+    messageV = allMessages.map(message => {
+      return (
+        <div className="bubbleWrapper">
+          <div className="inlineContainer">
+            <img
+              className="inlineIcon"
+              src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+            ></img>
+            <div className="otherBubble other">{message}</div>
+          </div>
+          <span className="other"></span>
+        </div>
+      )
     })
   }
 
@@ -29,8 +38,13 @@ const ViewMessage = () => {
 
   return (
     <>
-      <div>
-        {message}
+      <div id="bg-image">
+      <NavLink to='/'>
+        <Button>Back</Button>
+      </NavLink>
+        {background}
+        <h1 id="view-header">Your Messages</h1>
+        <div>{messageV}</div>
       </div>
     </>
   )
